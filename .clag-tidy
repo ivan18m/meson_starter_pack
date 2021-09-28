@@ -7,6 +7,8 @@ misc-*
 cert-*,
 readability-*,
 clang-analyzer-*,
+clang-diagnostic-*,
+-clang-diagnostic-unused-command-line-argument,
 -performance-unnecessary-value-param,
 -modernize-use-trailing-return-type,
 -google-runtime-references,
@@ -27,7 +29,7 @@ llvm-*,
 -llvmlibc-*
 '
 CheckOptions: [{ key: misc-non-private-member-variables-in-classes, value: IgnoreClassesWithAllMemberVariablesBeingPublic }]
-WarningsAsErrors: ''
+WarningsAsErrors: false
 AnalyzeTemporaryDtors: false
 FormatStyle: none
 HeaderFilterRegex: ''
