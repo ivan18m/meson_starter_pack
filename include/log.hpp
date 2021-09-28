@@ -10,7 +10,7 @@ class Log
 public:
     static void init_console_file();
     static void init_console();
-    static std::shared_ptr<spdlog::logger> logger() { return s_logger; }
+    static std::shared_ptr<spdlog::logger>& logger() { return s_logger; }
 private:
     static std::shared_ptr<spdlog::sinks::stdout_color_sink_mt> console_sink;
     static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> file_sink;
