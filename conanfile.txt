@@ -1,0 +1,33 @@
+[requires]
+catch2/2.13.7
+spdlog/1.9.2
+nlohmann_json/3.10.2
+fmt/8.0.1
+# openssl/3.0.0
+
+[generators]
+pkg_config
+
+[options]
+# fmt:shared=True
+spdlog:header_only=True
+# openssl:shared=True
+
+[imports]
+# headers to include/external
+include, *.h -> ../include/external
+include, *.hpp -> ../include/external
+include, *.hh -> ../include/external
+# lib to lib
+lib, *.lib -> ./lib
+lib, *.a -> ./lib
+
+# Has to be shipped with the app
+# bin to bin
+bin, *.dll -> ./app/bin
+bin, *.so* -> ./app/bin
+bin, *.dylib* -> ./app/bin
+# lib to bin
+lib, *.so* -> ./app/bin
+lib, *.dylib* -> ./app/bin
+lib, *.dll -> ./app/bin

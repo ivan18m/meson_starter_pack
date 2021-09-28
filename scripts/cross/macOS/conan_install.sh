@@ -1,0 +1,15 @@
+#!/bin/sh
+cd ../../../build/
+conan install .. --build=missing
+
+[settings]
+os=Macos
+arch=x86_64
+compiler=clang
+compiler.version=12.0
+compiler.libcxx=libstdc++11
+build_type=Release
+
+[env]
+CC=/usr/bin/clang
+CXX=/usr/bin/clang++

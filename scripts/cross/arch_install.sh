@@ -1,5 +1,9 @@
 #!/bin/sh
-#
+
+# Required
+
+sudo pacman -S meson ninja conan
+
 # Arch Linux x86_64
 #
 # cross-compile packages:
@@ -12,4 +16,4 @@
 #     x86_64:
 #     arm: 
 
-sudo pacman -S meson ninja risc-v mingw-w64 aarch64-linux-gnu-gcc
+sudo pacman -S risc-v mingw-w64 aarch64-linux-gnu-gcc

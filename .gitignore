@@ -1,2 +1,5 @@
 .vscode
 .build
+.kdev4
+build
+include/external

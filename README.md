@@ -1,3 +1,21 @@
 ## Meson starter pack
-build scripts are in `scripts/` folder  
-example for cross-compile to RISC-V architecture in `scripts/riscv64`
+Packages needed to build: meson, ninja, conan  
+Usage:
+```bash
+git clone https://github.com/ivan18m/meson_starter_pack.git
+cd meson_starter_pack
+```
+use conan package manager
+```bash
+cd scripts
+./conan_install.sh
+```
+```
+build scripts are in `scripts/` folder 
+```bash
+./meson_setup.sh
+./meson_compile.sh
+./meson_test.sh
+cd ..
+``` 
+`scripts/cross/` contains examples for cross-compile to RISC-V and ARM architecture; Windows and macOS(todo) platforms  

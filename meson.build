@@ -11,7 +11,31 @@ project(
                     ]
 )
 
-exe = executable('meson_test', 'meson_test.cpp',
-  install : true)
+inc = include_directories('include')
+inc_ext = include_directories('include/external')
 
-test('basic', exe)
+# fmt = dependency('fmt')
+# spdlog = dependency('spdlog')
+
+sources = [
+  'src/main.cpp',
+  'src/config.cpp',
+  'src/log.cpp',
+]
+exe = executable(
+  'MyApp', sources,
+  cpp_pch : ['pch/pch.hpp', 'pch/pch.cpp'],
+  include_directories : [inc, inc_ext],
+  # dependencies : [fmt,spdlog],
+  # link_with : openssl,
+  # install : true,
+)
+
+test_sources = [
+  'tests/main.cpp',
+  'tests/factorial.cpp',
+]
+test = executable('MyAppTest', test_sources)
+test('Catch2 tests', test)
+
+# Copy binary, config and dynamic libs to app/bin
