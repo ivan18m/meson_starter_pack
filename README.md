@@ -10,8 +10,7 @@ use conan package manager
 cd scripts
 ./conan_install.sh
 ```
-```
-build scripts are in `scripts/` folder 
+meson and ninja build scripts are in `scripts/` folder 
 ```bash
 ./meson_setup.sh
 ./meson_compile.sh
