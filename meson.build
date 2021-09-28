@@ -38,4 +38,4 @@ test_sources = [
 test = executable('MyAppTest', test_sources)
 test('Catch2 tests', test)
 
-# Copy binary, config and dynamic libs to app/bin
+# TODO: Copy binary, config and dynamic libs to app/bin
