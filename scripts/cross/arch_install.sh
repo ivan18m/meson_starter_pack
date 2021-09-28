@@ -1,11 +1,10 @@
 #!/bin/sh
-
+#
+# Arch Linux x86_64
 # Required
 
 sudo pacman -S meson ninja conan
 
-# Arch Linux x86_64
-#
 # cross-compile packages:
 #   linux:
 #     risc-v: risc-v
