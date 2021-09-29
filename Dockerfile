@@ -24,5 +24,4 @@ RUN apt install -y \
 			vim
 
 RUN echo "Installing dependencies not found in the package repos..."
-
 RUN pip3 install conan meson
