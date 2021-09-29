@@ -15,14 +15,14 @@ Modern C++ project template with:
 git clone https://github.com/ivan18m/meson_starter_pack.git
 cd meson_starter_pack
 ```
-Get external libraries with conan
+Get external libraries with conan.  
 Header libs will be copied to `include/external/`
 ```bash
 cd scripts
 ./conan_install.sh
 cd ..
 ```
-meson and ninja build scripts are in `scripts/` folder 
+meson and ninja build scripts are in `scripts/` folder.  
 ```bash
 cd scripts
 ./meson_setup.sh
@@ -31,7 +31,7 @@ cd scripts
 cd ..
 ``` 
 
-`scripts/cross/` contains examples for cross-compile to RISC-V and ARM architecture; Windows and macOS(todo) platforms  
+`scripts/cross/` contains examples for cross-compile to RISC-V and ARM architecture; Windows and macOS(todo) platforms.  
 
 TODOs:
 * App packaging
