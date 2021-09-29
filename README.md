@@ -8,7 +8,7 @@ Modern C++ project template with:
     * spdlog
     * nlohmann_json
 
-Packages needed to build: meson, ninja, conan  
+**Packages** needed to **build**: **meson, ninja, conan**  
 ### Usage:
 ```bash
 git clone https://github.com/ivan18m/meson_starter_pack.git
