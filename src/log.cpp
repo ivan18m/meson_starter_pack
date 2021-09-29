@@ -1,3 +1,16 @@
+
+/**
+ * @file log.cpp
+ * @author Ivan Mercep
+ * @brief 
+ * Logging class setup with macros so it's easy to switch library
+ * @version 0.1
+ * @date 2021-09-29
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "core.hpp"
 #include "log.hpp"
 #include "spdlog/sinks/stdout_color_sinks.h"

@@ -1,3 +1,15 @@
+/**
+ * @file factorial.cpp
+ * @author Ivan Mercep
+ * @brief 
+ * Example, to be deleted
+ * @version 0.1
+ * @date 2021-09-29
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "catch2/catch.hpp"
 
 unsigned int factorial(unsigned int number)

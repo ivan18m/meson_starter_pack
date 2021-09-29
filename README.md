@@ -2,6 +2,7 @@
 Modern C++ project template with: 
 * Meson build system
 * Conan package manager 
+* Doxygen documentation
 * Libraries set-up:
     * Catch2
     * spdlog
@@ -13,7 +14,8 @@ Packages needed to build: meson, ninja, conan
 git clone https://github.com/ivan18m/meson_starter_pack.git
 cd meson_starter_pack
 ```
-get external libraries with conan
+Get external libraries with conan
+Header libs will be copied to `include/external/`
 ```bash
 cd scripts
 ./conan_install.sh
@@ -34,3 +36,4 @@ TODOs:
 * App packaging
 * Dynamic link
 * macOS (cross) build
+* JSON with comments config
