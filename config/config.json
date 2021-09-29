@@ -1,6 +1,6 @@
 // Configuration file loaded at runtime
 {
-    "test": "Works!",
-    "myInt": 5/*6*/,
-    "myFloat": 1.23
+  "test": "Works!",
+  "myInt": 5/*6*/,
+  "myFloat": 1.23
 }

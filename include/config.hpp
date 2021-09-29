@@ -21,6 +21,7 @@ public:
     static inline auto get_value(const std::string& key) {
         return j[key];
     }
+    static std::string config();
     static void print();
 
 private:

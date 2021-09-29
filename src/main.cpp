@@ -21,6 +21,7 @@ int main(int argc, char **argv)
         return 1;
     }
     Config::init(); // initialize config
+    Config::print();
     LOGINFO(CONF("test"));
     LOGINFO("{}", CONF("myInt"));
     LOGINFO("{}", CONF("myFloat"));

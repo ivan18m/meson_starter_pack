@@ -47,5 +47,16 @@ void Config::init(const std::string& path)
     {
         LOGCRITICAL("CONFIG JSON PARSE: {}", e.what());
     }
-} 
+}
+
+std::string Config::config()
+{
+    int indent = 2;
+    return j.dump(indent);
+}
+
+void Config::print()
+{
+    LOGINFO("JSON Config:\n{}", config());
+}
 
