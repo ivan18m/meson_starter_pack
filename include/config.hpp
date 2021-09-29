@@ -17,10 +17,11 @@ class Config
 {
 public:
     static void init();
-    static void init(std::string path);
+    static void init(const std::string& path);
     static inline auto get_value(const std::string& key) {
         return j[key];
     }
+    static void print();
 
 private:
     static json j;

@@ -20,14 +20,32 @@ void Config::init()
 {
     std::string path = "config/config.json";
     std::ifstream i(path);
-    i >> j;
-    LOGINFO("Config loaded: {}", path);
+    bool allow_exceptions = true;
+    bool skip_comments = true;
+    try
+    {
+        j = json::parse(i, nullptr, allow_exceptions, skip_comments);
+        LOGINFO("Config loaded: {}", path);
+    }
+    catch (json::exception &e)
+    {
+        LOGCRITICAL("CONFIG JSON PARSE: {}", e.what());
+    }
 } 
 
-void Config::init(std::string path)
+void Config::init(const std::string& path)
 {
     std::ifstream i(path);
-    i >> j;
-    LOGINFO("Config loaded {}", path);
+    bool allow_exceptions = true;
+    bool skip_comments = true;
+    try
+    {
+        j = json::parse(i, nullptr, allow_exceptions, skip_comments);
+        LOGINFO("Config loaded: {}", path);
+    }
+    catch (json::exception &e)
+    {
+        LOGCRITICAL("CONFIG JSON PARSE: {}", e.what());
+    }
 } 
 

@@ -3,6 +3,7 @@ Modern C++ project template with:
 * Meson build system
 * Conan package manager 
 * Doxygen documentation
+* Runtime JSON (with comments) configuration loader
 * Libraries set-up:
     * Catch2
     * spdlog
@@ -36,4 +37,3 @@ TODOs:
 * App packaging
 * Dynamic link
 * macOS (cross) build
-* JSON with comments config
