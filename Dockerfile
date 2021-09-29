@@ -21,7 +21,8 @@ RUN apt install -y \
 			python3-pip \
 			tar \
 			unzip \
-			vim
+			vim \
+			meson
 
 RUN echo "Installing dependencies not found in the package repos..."
-RUN pip3 install conan meson
+RUN pip3 install conan
