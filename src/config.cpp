@@ -2,7 +2,7 @@
  * @file config.cpp
  * @author Ivan Mercep
  * @brief 
- * Config class with json configuration and macros so it's easy to switch library
+ * Config class with static json member and macros so it's easy to switch library
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -12,7 +12,6 @@
 #include "config.hpp"
 #include "log.hpp"
 #include "nlohmann/json.hpp"
-
 
 json Config::j;
 
