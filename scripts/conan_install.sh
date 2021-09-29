@@ -1,6 +1,6 @@
 #!/bin/sh
 cd ../
-mkdir build
-cd build
+mkdir -p build/conan
+cd build/conan
 
-conan install .. --build=missing
+conan install ../.. --build=missing

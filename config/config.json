@@ -1,3 +1,5 @@
 {
-    "test": "Works!"
+    "test": "Works!",
+    "myInt": 5,
+    "myFloat": 1.23
 }

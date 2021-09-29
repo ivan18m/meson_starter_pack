@@ -3,16 +3,21 @@
 #include "log.hpp"
 #include "nlohmann/json.hpp"
 
-using json = nlohmann::json;
 
-Config::Config() 
+json Config::j;
+
+void Config::init()
 {
-    std::ifstream i("config/config.json");
-    i >> this->j;
-    INFO("Config created");
+    std::string path = "config/config.json";
+    std::ifstream i(path);
+    i >> j;
+    LOGINFO("Config loaded: {}", path);
 } 
 
-Config::~Config()
+void Config::init(std::string path)
 {
-    INFO("Config destroyed");
-}
+    std::ifstream i(path);
+    i >> j;
+    LOGINFO("Config loaded {}", path);
+} 
+

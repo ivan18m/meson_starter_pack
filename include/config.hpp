@@ -6,8 +6,14 @@ using json = nlohmann::json;
 class Config
 {
 public:
-    Config();
-    ~Config();
+    static void init();
+    static void init(std::string path);
+    static inline auto get_value(const std::string& key) {
+        return j[key];
+    }
+
 private:
-    json j;
+    static json j;
 };
+
+#define CONF(...)         ::Config::get_value(__VA_ARGS__)

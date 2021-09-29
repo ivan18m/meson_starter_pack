@@ -1,0 +1,44 @@
+#include "resources.h"
+#include <winver.h>
+
+#define VER_VERSION         @VERSION_MAJOR@,@VERSION_MINOR@,@VERSION_MICRO@,0
+#define IS_DLL 0
+
+#ifdef IS_DLL
+#define F_TYPE VFT_DLL
+#else
+#define F_TYPE VFT_APP
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_VERSION
+PRODUCTVERSION 	VER_VERSION
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+FILEFLAGS      	0
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	F_TYPE
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "@COMPANY_NAME@"
+            VALUE "FileDescription",  "@PACKAGE_DESC@"
+            VALUE "FileVersion",      "@PACKAGE_VERSION@.0"
+            VALUE "InternalName",     "@PACKAGE_NAME@"
+            VALUE "OriginalFilename", "@PACKAGE_NAME@"
+            VALUE "ProductName",      "@PACKAGE_NAME@"
+            VALUE "ProductVersion",   "@PACKAGE_VERSION@"
+            VALUE "LegalCopyright",   "Copyright © @COMPANY_NAME@"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#include "winuser.h"
+IDI_APP     ICON	"@PACKAGE_NAME@.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "@PACKAGE_NAME@.manifest"
