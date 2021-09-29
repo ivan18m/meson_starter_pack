@@ -9,8 +9,8 @@ fmt/8.0.1
 pkg_config
 
 [options]
-# fmt:shared=True
 spdlog:header_only=True
+# fmt:shared=True
 # openssl:shared=True
 
 [imports]
