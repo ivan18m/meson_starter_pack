@@ -17,9 +17,11 @@ get external libraries with conan
 ```bash
 cd scripts
 ./conan_install.sh
+cd ..
 ```
 meson and ninja build scripts are in `scripts/` folder 
 ```bash
+cd scripts
 ./meson_setup.sh
 ./meson_compile.sh
 ./meson_test.sh
