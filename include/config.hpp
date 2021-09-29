@@ -3,8 +3,6 @@
  * @author Ivan Mercep
  * @brief 
  * Config class with json configuration and macros so it's easy to switch library
- * @version 0.1
- * @date 2021-09-29
  * 
  * @copyright Copyright (c) 2021
  * 
