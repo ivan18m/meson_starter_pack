@@ -11,6 +11,7 @@
 #include "config.hpp"
 #include "log.hpp"
 #include <iostream>
+#include <openssl/ssl.h>
 
 int main(int argc, char **argv) 
 {

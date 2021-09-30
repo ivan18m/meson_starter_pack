@@ -3,15 +3,14 @@ catch2/2.13.7
 spdlog/1.9.2
 nlohmann_json/3.10.2
 fmt/8.0.1
-# openssl/3.0.0
+openssl/3.0.0
 
 [generators]
 pkg_config
 
 [options]
 spdlog:header_only=True
-# fmt:shared=True
-# openssl:shared=True
+openssl:shared=True
 
 [imports]
 # headers to include/external

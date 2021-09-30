@@ -1,6 +1,8 @@
 #!/bin/sh
-cd ../
-mkdir -p build/conan
-cd build/conan
+SRC=../
+DST=build/conan
 
-conan install ../.. --build=missing
+cd $SRC
+mkdir -p $DST
+
+conan install . -if=$DST --build=missing
