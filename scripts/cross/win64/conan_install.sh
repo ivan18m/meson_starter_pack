@@ -1,6 +1,6 @@
 #!/bin/sh
 SRC=../../../
-DST=build/win64/conan
+DST=build/conan
 cd $SRC
 mkdir -p $DST
 
