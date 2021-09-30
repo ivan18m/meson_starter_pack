@@ -1,5 +1,7 @@
 .vscode
-.build
 .kdev4
+.idea
+.settings
+
 build
 include/external

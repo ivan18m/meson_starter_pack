@@ -11,6 +11,9 @@
  */
 
 #include <memory>
+#include <thread>
+#include <chrono>
+#include <future>
 #include <string>
 #include <vector>
 #include <unordered_map>
