@@ -1,12 +1,16 @@
 ---
-Language:        Cpp
-BasedOnStyle:  Microsoft
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: c++17
+TabWidth: 8
+UseTab: Never
+IndentPPDirectives: AfterHash
 AccessModifierOffset: -4
 AlignAfterOpenBracket: DontAlign
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignEscapedNewlines: Right
-AlignOperands:   'true'
+AlignOperands: 'true'
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowShortBlocksOnASingleLine: 'Always'
@@ -101,8 +105,5 @@ SpacesInContainerLiterals: true
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
-Standard: c++17
-TabWidth:        8
-UseTab:          Never
-IndentPPDirectives: AfterHash
+
 ...
