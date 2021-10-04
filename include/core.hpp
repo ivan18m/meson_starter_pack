@@ -1,11 +1,11 @@
 /**
  * @file core.hpp
  * @author Ivan Mercep
- * @brief 
+ * @brief
  * Core header with: precompiled headers, global variables, preprocessing...
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 
 #pragma once

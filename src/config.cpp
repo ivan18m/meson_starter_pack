@@ -1,15 +1,15 @@
 /**
  * @file config.cpp
  * @author Ivan Mercep
- * @brief 
+ * @brief
  * Config class with static json member and macros so it's easy to switch library
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 
-#include "core.hpp"
 #include "config.hpp"
+#include "core.hpp"
 #include "log.hpp"
 #include "nlohmann/json.hpp"
 
@@ -19,6 +19,8 @@ void Config::init()
 {
     std::string path = "config/config.json";
     std::ifstream i(path);
+    if (!i.is_open())
+        throw std::runtime_error("Failed to open file: " + path);
     bool allow_exceptions = true;
     bool skip_comments = true;
     try
@@ -30,11 +32,13 @@ void Config::init()
     {
         LOGCRITICAL("CONFIG JSON PARSE: {}", e.what());
     }
-} 
+}
 
-void Config::init(const std::string& path)
+void Config::init(const std::string &path)
 {
     std::ifstream i(path);
+    if (!i.is_open())
+        throw std::runtime_error("Failed to open file: " + path);
     bool allow_exceptions = true;
     bool skip_comments = true;
     try
@@ -58,4 +62,3 @@ void Config::print()
 {
     LOGINFO("JSON Config:\n{}", config());
 }
-

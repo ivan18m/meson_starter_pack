@@ -1,22 +1,22 @@
 /**
  * @file main.cpp
  * @author Ivan Mercep
- * @brief 
- * 
+ * @brief
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 
-#include "core.hpp"
 #include "config.hpp"
+#include "core.hpp"
 #include "log.hpp"
 #include <iostream>
 #include <openssl/ssl.h>
 
-int main(int argc, char **argv) 
+int main(int argc, char **argv)
 {
     Log::init_console_file(); // Initialize logger
-    if(argc != 1) 
+    if (argc != 1)
     {
         LOGCRITICAL("{} takes no arguments", argv[0]);
         return 1;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     LOGINFO(CONF("test"));
     LOGINFO("{}", CONF("myInt"));
     LOGINFO("{}", CONF("myFloat"));
-    
+
     LOGINFO("This is project {}", APP_NAME);
     return 0;
 }

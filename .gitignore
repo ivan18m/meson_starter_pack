@@ -1,7 +1,7 @@
-.vscode
 .kdev4
 .idea
 .settings
+#.vscode (disabled on purpose)
 
 build
 include/external

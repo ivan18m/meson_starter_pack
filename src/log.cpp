@@ -2,15 +2,15 @@
 /**
  * @file log.cpp
  * @author Ivan Mercep
- * @brief 
+ * @brief
  * Logging class setup with macros so it's easy to switch library
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 
-#include "core.hpp"
 #include "log.hpp"
+#include "core.hpp"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 std::shared_ptr<spdlog::sinks::stdout_color_sink_mt> Log::console_sink;
@@ -26,7 +26,7 @@ void Log::init_console_file()
     console_sink->set_pattern("%^[%T] %n: %v%$");
     // console_sink->set_pattern("[multi_sink_example] [%^%l%$] %v");
 
-    file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt> ("logs/log.txt", true);
+    file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("logs/log.txt", true);
     file_sink->set_level(spdlog::level::warn);
     file_sink->set_pattern("[%T] [%l] %v");
 
