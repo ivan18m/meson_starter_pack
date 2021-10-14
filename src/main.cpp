@@ -13,7 +13,7 @@
 #include <iostream>
 #include <openssl/ssl.h>
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
     Log::init_console_file(); // Initialize logger
     if (argc != 1)

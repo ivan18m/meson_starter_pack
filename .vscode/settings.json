@@ -1,24 +1,28 @@
 {
     "C_Cpp.clang_format_style": "Microsoft",
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.formatting": "Default",
+    "C_Cpp.errorSquiggles": "Disabled",
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": true,
-    "clang-tidy.checks":  [
+    "clang-tidy.executable": "/usr/bin/clang-tidy",
+    "clang-tidy.checks": [
         "-*",
         "cert-*",
         "clang-*",
         "cppcoreguidelines-*",
+        "google-*",
+        "misc-*",
+        "modernize-*",
+        "performance-*",
+        "readability-*",
+        //disable checks (-)
         "-cppcoreguidelines-avoid-non-const-global-variables",
         "-cppcoreguidelines-macro-usage",
         "-cppcoreguidelines-pro-bounds-constant-array-index",
-        "google-*",
-        "modernize-*",
         "-modernize-use-trailing-return-type",
-        "performance-*",
-        "readability-*"
     ],
-    "clang-tidy.buildPath": "${workspaceFolder}/build/clang-tidy",
-    "C_Cpp.errorSquiggles": "Disabled",
+    "clang-tidy.buildPath": "${workspaceFolder}/build",
     "files.associations": {
         "iostream": "cpp",
         "cctype": "cpp",
@@ -100,6 +104,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "spatialreference": "cpp"
     }
 }
