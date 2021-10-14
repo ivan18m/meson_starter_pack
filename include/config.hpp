@@ -15,7 +15,7 @@ using json = nlohmann::json;
 
 class Config
 {
-  public:
+public:
     static void init();
     static void init(const std::string &path);
     static inline auto get_value(const std::string &key)
@@ -25,7 +25,7 @@ class Config
     static std::string config();
     static void print();
 
-  private:
+private:
     static json j;
 };
 

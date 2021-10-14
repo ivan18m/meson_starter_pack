@@ -1,6 +1,7 @@
 .kdev4
 .idea
 .settings
+.cache
 #.vscode (disabled on purpose)
 
 build

@@ -17,7 +17,7 @@
 
 class Log
 {
-  public:
+public:
     static void init_console_file();
     static void init_console();
     static inline std::shared_ptr<spdlog::logger> &logger()
@@ -25,7 +25,7 @@ class Log
         return s_logger;
     }
 
-  private:
+private:
     static std::shared_ptr<spdlog::sinks::stdout_color_sink_mt> console_sink;
     static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> file_sink;
     static std::shared_ptr<spdlog::logger> s_logger;
